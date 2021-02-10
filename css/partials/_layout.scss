@@ -6,6 +6,13 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+
+
+    @include responsive(){
+        flex-direction: column;     // elementos alinhados em coluna, um abaixo do outro
+        height: auto;
+        overflow: none;
+   }
 }
 
 .container-item-1{
@@ -15,11 +22,27 @@
     align-items: flex-start;
 }
 
+.flex{
+    display: flex;
+}
 
+.w-auto{
+    width: auto;
+}
+
+.align-items-center{
+    align-items: center;
+}
 
 .spiderman{
     width: 145%;
     transform: translate3d(-170px, 0, 0);
+
+    @include responsive(){
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+
+    }
 }
 
 /* Botão Compre agora */
