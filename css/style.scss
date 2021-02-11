@@ -1,26 +1,21 @@
-*, *::after, *::before {
+*, *:after, *:before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
 }
 
-@mixin responsive(){
-    @media screen and (max-width: 960px){
-        @content;
-    }
-}
-
 @import 'partials/colors';
+@import 'partials/spacing';
 
 body{
     width: 100%;
     height: 100vh;
-    background-color: $blue-dark;
-    
+
+    background: $blue-dark;
 }
 
-svg, img {
+img, svg{
     display: block;
     width: 100%;
 }
@@ -43,5 +38,5 @@ p{
 
 @import 'partials/layout';
 @import 'partials/menu';
+@import 'partials/buttons';
 @import 'partials/animations';
-@import 'partials/spacing';
